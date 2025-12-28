@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construction Project Manager - AI-Powered Cost Tracking</title>
-    <meta name="description" content="Modern construction project management system with AI copilot, real-time cost tracking, and profitability analysis.">
+    <meta name="description" content="Modern construction project management system with AI copilot powered by RAG, LangChain, pgvector, and GPT-5 Nano. Real-time cost tracking, vector similarity search, and profitability analysis.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,6 +19,7 @@
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
+                <a href="#ai-tech">AI/ML</a>
                 <a href="#tech">Tech Stack</a>
                 <a href="#demo">Demo</a>
                 <a href="https://github.com/zeinalasali/project-manager-showcase" target="_blank" class="btn-outline">View Repo</a>
@@ -31,12 +32,13 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">AI-Powered Construction Project Management</h1>
-                <p class="hero-subtitle">Streamline project tracking, cost management, and profitability analysis with intelligent automation</p>
+                <p class="hero-subtitle">Advanced RAG system with LangChain, pgvector, and GPT-5 Nano. Streamline project tracking, cost management, and profitability analysis with intelligent automation and semantic search.</p>
                 <div class="hero-badges">
-                    <span class="badge">AI Copilot</span>
-                    <span class="badge">Real-time Analytics</span>
-                    <span class="badge">Cost Tracking</span>
-                    <span class="badge">Profitability Insights</span>
+                <span class="badge">AI Copilot</span>
+                <span class="badge">RAG & Vector Search</span>
+                <span class="badge">LangChain</span>
+                <span class="badge">pgvector</span>
+                <span class="badge">Real-time Analytics</span>
                 </div>
                 <div class="hero-cta">
                     <a href="#demo" class="btn-primary">See It In Action</a>
@@ -57,8 +59,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                         </svg>
                     </div>
-                    <h3>AI Copilot</h3>
-                    <p>Intelligent assistant powered by GPT-5 that analyzes your projects, provides cost insights, and answers questions about profitability in real-time.</p>
+                    <h3>AI Copilot with RAG</h3>
+                    <p>Intelligent assistant powered by GPT-5 Nano with Retrieval Augmented Generation (RAG). Uses LangChain and pgvector for semantic search across your project data, providing context-aware insights and answers.</p>
                 </div>
 
                 <div class="feature-card">
@@ -98,7 +100,7 @@
                         </svg>
                     </div>
                     <h3>Role-Based Access</h3>
-                    <p>Secure multi-tenant system with admin and labourer roles. Invitation key system for controlled user onboarding with predefined roles and hourly rates.</p>
+                    <p>Secure multi-tenant system with admin and user roles. Invitation key system for controlled user onboarding with predefined roles and hourly rates.</p>
                 </div>
 
                 <div class="feature-card">
@@ -147,12 +149,23 @@
                     </div>
                 </div>
                 <div class="tech-category">
-                    <h3>AI & Infrastructure</h3>
+                    <h3>AI & ML Stack</h3>
                     <div class="tech-items">
-                        <span class="tech-badge">OpenAI GPT-5</span>
-                        <span class="tech-badge">RAG (Embeddings)</span>
+                        <span class="tech-badge">OpenAI GPT-5 Nano</span>
+                        <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge">LangGraph</span>
+                        <span class="tech-badge">RAG</span>
+                        <span class="tech-badge">pgvector</span>
+                        <span class="tech-badge">Vector Search</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Infrastructure</h3>
+                    <div class="tech-items">
                         <span class="tech-badge">Docker</span>
                         <span class="tech-badge">Docker Compose</span>
+                        <span class="tech-badge">Supabase Edge Functions</span>
+                        <span class="tech-badge">Deno</span>
                     </div>
                 </div>
             </div>
@@ -202,12 +215,14 @@
 
                 <div class="demo-item">
                     <div class="demo-header">
-                        <h3>🤖 AI Copilot</h3>
+                        <h3>🤖 AI Copilot with RAG</h3>
                     </div>
                     <ul class="demo-list">
                         <li>Natural language project queries</li>
-                        <li>Real-time financial analysis</li>
-                        <li>Profitability insights and recommendations</li>
+                        <li>Vector similarity search (pgvector)</li>
+                        <li>Retrieval Augmented Generation (LangChain)</li>
+                        <li>Automatic embedding generation</li>
+                        <li>Multi-step reasoning (LangGraph)</li>
                         <li>Context-aware project assistance</li>
                     </ul>
                 </div>
@@ -218,7 +233,7 @@
                     </div>
                     <ul class="demo-list">
                         <li>Invitation key system for onboarding</li>
-                        <li>Role-based access control (Admin/Labourer)</li>
+                        <li>Role-based access control (Admin/User)</li>
                         <li>User profile management</li>
                         <li>Hourly rate configuration</li>
                     </ul>
@@ -234,6 +249,80 @@
                         <li>Secure API authentication</li>
                         <li>Role-based permissions</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI/ML Technologies Section -->
+    <section id="ai-tech" class="ai-tech">
+        <div class="container">
+            <h2 class="section-title">Advanced AI & ML Technologies</h2>
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <div class="ai-icon">🧠</div>
+                    <h3>Retrieval Augmented Generation (RAG)</h3>
+                    <p>Combines vector similarity search with LLM reasoning. Uses LangChain to retrieve relevant project context and generate intelligent responses based on your actual data.</p>
+                    <div class="ai-tech-tags">
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">Vector Search</span>
+                        <span class="tech-tag">Context Retrieval</span>
+                    </div>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">🔍</div>
+                    <h3>pgvector & Vector Similarity</h3>
+                    <p>PostgreSQL extension for storing 1536-dimensional embeddings. HNSW indexing enables fast semantic search to find similar project items based on meaning, not just keywords.</p>
+                    <div class="ai-tech-tags">
+                        <span class="tech-tag">pgvector</span>
+                        <span class="tech-tag">HNSW Index</span>
+                        <span class="tech-tag">1536-dim Vectors</span>
+                    </div>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">⚡</div>
+                    <h3>Automatic Embedding Generation</h3>
+                    <p>Every project item automatically generates embeddings using OpenAI's text-embedding-3-small model. No manual backfill needed - your data is instantly searchable.</p>
+                    <div class="ai-tech-tags">
+                        <span class="tech-tag">Auto-Embed</span>
+                        <span class="tech-tag">OpenAI Embeddings</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">🔄</div>
+                    <h3>LangGraph Multi-Step Reasoning</h3>
+                    <p>Complex analysis workflows using graph-based reasoning. Enables multi-step problem solving, data gathering, and insight generation for advanced project analysis.</p>
+                    <div class="ai-tech-tags">
+                        <span class="tech-tag">LangGraph</span>
+                        <span class="tech-tag">Workflows</span>
+                        <span class="tech-tag">Reasoning</span>
+                    </div>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">🎯</div>
+                    <h3>GPT-5 Nano Reasoning Model</h3>
+                    <p>Latest reasoning-capable model from OpenAI. Provides deeper analysis with step-by-step reasoning, making complex financial and project insights more accurate.</p>
+                    <div class="ai-tech-tags">
+                        <span class="tech-tag">GPT-5 Nano</span>
+                        <span class="tech-tag">Reasoning</span>
+                        <span class="tech-tag">2025 Model</span>
+                    </div>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">🔗</div>
+                    <h3>Custom Vector Store</h3>
+                    <p>Built-in SupabaseVectorStore integrates LangChain with pgvector. Seamlessly connects vector search with your PostgreSQL database for efficient RAG operations.</p>
+                    <div class="ai-tech-tags">
+                        <span class="tech-tag">Custom Store</span>
+                        <span class="tech-tag">LangChain Integration</span>
+                        <span class="tech-tag">Supabase</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -255,13 +344,13 @@
                 </div>
                 <div class="arch-arrow">↓</div>
                 <div class="arch-layer">
-                    <h4>Database Layer</h4>
-                    <p>Supabase PostgreSQL with RLS policies, secure authentication, and optimized queries</p>
+                    <h4>Database & Vector Layer</h4>
+                    <p>Supabase PostgreSQL with RLS policies, pgvector extension for 1536-dimensional embeddings, HNSW indexing, and secure authentication</p>
                 </div>
                 <div class="arch-arrow">↓</div>
                 <div class="arch-layer">
-                    <h4>AI Layer</h4>
-                    <p>OpenAI GPT-5 integration with RAG capabilities, embeddings, and intelligent analysis</p>
+                    <h4>AI & ML Layer</h4>
+                    <p>OpenAI GPT-5 Nano + LangChain (RAG) + LangGraph (multi-step reasoning). Automatic embedding generation with text-embedding-3-small. Vector similarity search for semantic queries.</p>
                 </div>
             </div>
         </div>
