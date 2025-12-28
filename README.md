@@ -182,8 +182,8 @@ LangGraph extends LangChain with graph-based workflows, enabling multi-step reas
 ### AI/ML Stack
 - **OpenAI GPT-5 Nano API** - Latest reasoning-capable model for chat completions
 - **OpenAI text-embedding-3-small** - 1536-dimensional embeddings
-- **LangChain 0.3.0** - RAG orchestration and LLM integration
-- **LangGraph 0.2.40** - Multi-step reasoning workflows
+- **LangChain** – RAG orchestration
+- **LangGraph** – Multi-step reasoning workflows
 - **pgvector** - PostgreSQL extension for vector similarity search
 
 ### Infrastructure
