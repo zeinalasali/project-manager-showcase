@@ -276,7 +276,7 @@ Full API documentation available at `http://localhost:8000/docs` when the backen
 
 Visit the interactive showcase website to see the application in action:
 
-**🔗 [View Showcase Website]([[https://your-showcase-url.com](https://zeinalasali.github.io/project-manager-showcase/)])** 
+**🔗 [View Showcase Website](https://zeinalasali.github.io/project-manager-showcase/)** 
 
 The showcase includes:
 - Interactive demo with GIFs showing all features
