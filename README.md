@@ -171,7 +171,6 @@ LangGraph extends LangChain with graph-based workflows, enabling multi-step reas
 
 ### Backend
 - **FastAPI** (Python 3.11) for RESTful API
-- **Pydantic** for data validation
 - **Uvicorn** as ASGI server
 
 ### Database & Auth
