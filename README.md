@@ -42,36 +42,36 @@ This application solves these problems by integrating **advanced AI/ML technolog
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    Frontend Layer                            │
-│  Next.js 14 + TypeScript + Tailwind CSS                      │
-│  Real-time UI with React 18                                  │
-└───────────────────────┬───────────────────────────────────────┘
+│                    Frontend Layer                           │
+│  Next.js 14 + TypeScript + Tailwind CSS                     │
+│  Real-time UI with React 18                                 │
+└───────────────────────┬─────────────────────────────────────┘
                         │
                         ↓
 ┌─────────────────────────────────────────────────────────────┐
-│                    API Layer                                 │
-│  FastAPI (Python 3.11) + Pydantic Validation               │
-│  RESTful endpoints with comprehensive error handling         │
-└───────────────────────┬───────────────────────────────────────┘
+│                    API Layer                                │
+│  FastAPI (Python 3.11) + Pydantic Validation                │
+│  RESTful endpoints with comprehensive error handling        │
+└───────────────────────┬─────────────────────────────────────┘
                         │
                         ↓
 ┌─────────────────────────────────────────────────────────────┐
-│              Database & Vector Layer                         │
+│              Database & Vector Layer                        │
 │  Supabase PostgreSQL + pgvector Extension                   │
 │  • 1536-dimensional embeddings (text-embedding-3-small)     │
-│  • HNSW indexing for fast similarity search                  │
+│  • HNSW indexing for fast similarity search                 │
 │  • Row-Level Security (RLS) policies                        │
-│  • JWT authentication                                        │
-└───────────────────────┬───────────────────────────────────────┘
+│  • JWT authentication                                       │
+└───────────────────────┬─────────────────────────────────────┘
                         │
                         ↓
 ┌─────────────────────────────────────────────────────────────┐
-│                  AI & ML Layer                               │
-│  • OpenAI GPT-5 Nano API (reasoning-capable model)         │
+│                  AI & ML Layer                              │
+│  • OpenAI GPT-5 Nano API (reasoning-capable model)          │
 │  • LangChain (RAG orchestration)                            │
-│  • LangGraph (multi-step reasoning workflows)             │
+│  • LangGraph (multi-step reasoning workflows)               │
 │  • Custom SupabaseVectorStore (LangChain integration)       │
-│  • Automatic embedding generation pipeline                   │
+│  • Automatic embedding generation pipeline                  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -252,96 +252,6 @@ project_manager/
 - **user_is_in_org()** - RLS helper function
 - **user_is_admin_in_org()** - RLS helper function
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 20+ and npm
-- Python 3.11+
-- Docker and Docker Compose
-- Supabase account and project
-- OpenAI API key with access to:
-  - GPT-5 Nano API
-  - text-embedding-3-small model
-
-### Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/zeinalasali/project-manager-showcase.git
-   cd project-manager-showcase
-   ```
-
-2. **Set up environment variables**
-
-   Create `.env` files in both `backend/` and root directory:
-   
-   **Backend `.env`:**
-   ```env
-   SUPABASE_URL=your_supabase_url
-   SUPABASE_KEY=your_supabase_anon_key
-   SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-   OPENAI_API_KEY=your_openai_api_key
-   OPENAI_CHAT_MODEL=gpt-5-nano-2025-08-07
-   OPENAI_EMBED_MODEL=text-embedding-3-small
-   ```
-
-   **Frontend `.env.local`:**
-   ```env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   NEXT_PUBLIC_API_URL=http://localhost:8000
-   ```
-
-3. **Set up database**
-
-   Run the following migrations in your Supabase SQL Editor:
-   - Enable pgvector extension
-   - Create `ai_embeddings` table
-   - Create `match_embeddings()` function
-   - Set up RLS policies
-   - (See migration files in the repository)
-
-4. **Install dependencies**
-
-   **Frontend:**
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-   **Backend:**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   ```
-
-### Running the Application
-
-#### Option 1: Docker Compose (Recommended)
-
-```bash
-docker-compose up --build
-```
-
-This will start:
-- Frontend on `http://localhost:3000`
-- Backend API on `http://localhost:8000`
-- API docs at `http://localhost:8000/docs`
-
-#### Option 2: Run Separately
-
-**Backend:**
-```bash
-cd backend
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-```
-
-**Frontend:**
-```bash
-cd frontend
-npm run dev
-```
 
 ## 🔌 API Endpoints
 
@@ -367,7 +277,7 @@ Full API documentation available at `http://localhost:8000/docs` when the backen
 
 Visit the interactive showcase website to see the application in action:
 
-**🔗 [View Showcase Website](https://your-showcase-url.com)** *(Update this URL when you deploy your showcase website)*
+**🔗 [View Showcase Website]([https://your-showcase-url.com](https://zeinalasali.github.io/project-manager-showcase/))** 
 
 The showcase includes:
 - Interactive demo with GIFs showing all features
@@ -424,30 +334,6 @@ The showcase includes:
 - **Caching**: LangChain caches embeddings and responses where appropriate
 - **Database Optimization**: Indexed queries and efficient RLS policies
 
-## 🛠️ Development
-
-### Frontend Development
-
-```bash
-cd frontend
-npm run dev
-```
-
-### Backend Development
-
-```bash
-cd backend
-uvicorn main:app --reload
-```
-
-### Testing AI Features
-
-1. Create a project and add some items
-2. Navigate to `/admin/ai-copilot`
-3. Ask questions like:
-   - "Which items are most profitable?"
-   - "What's the total cost for project X?"
-   - "Show me items with high revenue"
 
 ## 📚 Additional Resources
 
@@ -456,14 +342,6 @@ uvicorn main:app --reload
 - [OpenAI API Documentation](https://platform.openai.com/docs)
 - [Supabase Documentation](https://supabase.com/docs)
 
-## 🤝 Contributing
-
-This is a private project. For questions or suggestions, please open an issue in the repository.
-
-## 📄 License
-
-This project is private and proprietary.
-
 ---
 
-**Built with ❤️ using OpenAI API, LangChain, pgvector, and modern web technologies.**
+**Source code can be provided upon request**
