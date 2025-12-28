@@ -88,6 +88,12 @@
             height: auto;
             border-radius: 0.5rem;
             display: block;
+            image-rendering: auto;
+        }
+
+        /* Ensure GIFs play continuously */
+        .gif-container img[src$=".gif"] {
+            animation: none;
         }
 
         .tech-highlight {
@@ -298,6 +304,34 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Ensure all GIFs loop continuously by restarting them when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const gifs = document.querySelectorAll('.gif-container img[src$=".gif"]');
+            
+            gifs.forEach(function(img) {
+                const originalSrc = img.src;
+                let hasRestarted = false;
+                
+                // Restart GIF when it comes into view
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting && !hasRestarted) {
+                            // Force restart by reloading the src
+                            const currentSrc = img.src;
+                            img.src = '';
+                            setTimeout(function() {
+                                img.src = originalSrc;
+                                hasRestarted = true;
+                            }, 50);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(img);
+            });
+        });
+    </script>
 </body>
 </html>
 
