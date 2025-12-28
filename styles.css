@@ -292,6 +292,19 @@ section {
     border: 1px solid var(--border);
 }
 
+.tech-badge.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+
+.tech-tag.highlight-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 700;
+}
+
 /* Demo Section */
 .demo {
     background: var(--bg-secondary);

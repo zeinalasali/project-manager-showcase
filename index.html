@@ -21,7 +21,7 @@
                 <a href="#features">Features</a>
                 <a href="#ai-tech">AI/ML</a>
                 <a href="#tech">Tech Stack</a>
-                <a href="#demo">Demo</a>
+                <a href="demo.html">Demo</a>
                 <a href="https://github.com/zeinalasali/project-manager-showcase" target="_blank" class="btn-outline">View Repo</a>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 <span class="badge">Real-time Analytics</span>
                 </div>
                 <div class="hero-cta">
-                    <a href="#demo" class="btn-primary">See It In Action</a>
+                    <a href="demo.html" class="btn-primary">See It In Action</a>
                     <a href="https://github.com/zeinalasali/project-manager-showcase" target="_blank" class="btn-secondary">View on GitHub</a>
                 </div>
             </div>
@@ -151,12 +151,13 @@
                 <div class="tech-category">
                     <h3>AI & ML Stack</h3>
                     <div class="tech-items">
-                        <span class="tech-badge">OpenAI GPT-5 Nano</span>
-                        <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge highlight">OpenAI GPT-5 Nano API</span>
+                        <span class="tech-badge highlight">LangChain</span>
+                        <span class="tech-badge highlight">pgvector</span>
                         <span class="tech-badge">LangGraph</span>
                         <span class="tech-badge">RAG</span>
-                        <span class="tech-badge">pgvector</span>
                         <span class="tech-badge">Vector Search</span>
+                        <span class="tech-badge">text-embedding-3-small</span>
                     </div>
                 </div>
                 <div class="tech-category">
@@ -262,9 +263,9 @@
                 <div class="ai-card">
                     <div class="ai-icon">🧠</div>
                     <h3>Retrieval Augmented Generation (RAG)</h3>
-                    <p>Combines vector similarity search with LLM reasoning. Uses LangChain to retrieve relevant project context and generate intelligent responses based on your actual data.</p>
+                    <p>Combines vector similarity search with LLM reasoning. Uses <strong>LangChain</strong> to retrieve relevant project context and generate intelligent responses based on your actual data. LangChain orchestrates the entire RAG pipeline from retrieval to generation.</p>
                     <div class="ai-tech-tags">
-                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag highlight-tag">LangChain</span>
                         <span class="tech-tag">Vector Search</span>
                         <span class="tech-tag">Context Retrieval</span>
                     </div>
@@ -273,21 +274,23 @@
                 <div class="ai-card">
                     <div class="ai-icon">🔍</div>
                     <h3>pgvector & Vector Similarity</h3>
-                    <p>PostgreSQL extension for storing 1536-dimensional embeddings. HNSW indexing enables fast semantic search to find similar project items based on meaning, not just keywords.</p>
+                    <p><strong>pgvector</strong> PostgreSQL extension for storing 1536-dimensional embeddings directly in your database. HNSW indexing enables fast semantic search to find similar project items based on meaning, not just keywords. All vector operations happen natively in PostgreSQL.</p>
                     <div class="ai-tech-tags">
-                        <span class="tech-tag">pgvector</span>
+                        <span class="tech-tag highlight-tag">pgvector</span>
                         <span class="tech-tag">HNSW Index</span>
                         <span class="tech-tag">1536-dim Vectors</span>
+                        <span class="tech-tag">PostgreSQL Native</span>
                     </div>
                 </div>
 
                 <div class="ai-card">
                     <div class="ai-icon">⚡</div>
                     <h3>Automatic Embedding Generation</h3>
-                    <p>Every project item automatically generates embeddings using OpenAI's text-embedding-3-small model. No manual backfill needed - your data is instantly searchable.</p>
+                    <p>Every project item automatically generates embeddings using <strong>OpenAI API</strong> (text-embedding-3-small model). Embeddings stored in <strong>pgvector</strong> for instant semantic search. No manual backfill needed - your data is instantly searchable.</p>
                     <div class="ai-tech-tags">
                         <span class="tech-tag">Auto-Embed</span>
-                        <span class="tech-tag">OpenAI Embeddings</span>
+                        <span class="tech-tag highlight-tag">OpenAI API</span>
+                        <span class="tech-tag highlight-tag">pgvector</span>
                         <span class="tech-tag">Real-time</span>
                     </div>
                 </div>
@@ -295,9 +298,10 @@
                 <div class="ai-card">
                     <div class="ai-icon">🔄</div>
                     <h3>LangGraph Multi-Step Reasoning</h3>
-                    <p>Complex analysis workflows using graph-based reasoning. Enables multi-step problem solving, data gathering, and insight generation for advanced project analysis.</p>
+                    <p>Complex analysis workflows using <strong>LangGraph</strong> for graph-based reasoning. Built on <strong>LangChain</strong>, it enables multi-step problem solving, data gathering, and insight generation for advanced project analysis.</p>
                     <div class="ai-tech-tags">
-                        <span class="tech-tag">LangGraph</span>
+                        <span class="tech-tag highlight-tag">LangGraph</span>
+                        <span class="tech-tag highlight-tag">LangChain</span>
                         <span class="tech-tag">Workflows</span>
                         <span class="tech-tag">Reasoning</span>
                     </div>
@@ -305,9 +309,10 @@
 
                 <div class="ai-card">
                     <div class="ai-icon">🎯</div>
-                    <h3>GPT-5 Nano Reasoning Model</h3>
-                    <p>Latest reasoning-capable model from OpenAI. Provides deeper analysis with step-by-step reasoning, making complex financial and project insights more accurate.</p>
+                    <h3>OpenAI GPT-5 Nano API</h3>
+                    <p>Latest reasoning-capable model from <strong>OpenAI API</strong>. Provides deeper analysis with step-by-step reasoning, making complex financial and project insights more accurate. Direct API integration for real-time AI responses.</p>
                     <div class="ai-tech-tags">
+                        <span class="tech-tag highlight-tag">OpenAI API</span>
                         <span class="tech-tag">GPT-5 Nano</span>
                         <span class="tech-tag">Reasoning</span>
                         <span class="tech-tag">2025 Model</span>
@@ -317,10 +322,11 @@
                 <div class="ai-card">
                     <div class="ai-icon">🔗</div>
                     <h3>Custom Vector Store</h3>
-                    <p>Built-in SupabaseVectorStore integrates LangChain with pgvector. Seamlessly connects vector search with your PostgreSQL database for efficient RAG operations.</p>
+                    <p>Built-in SupabaseVectorStore integrates <strong>LangChain</strong> with <strong>pgvector</strong>. Seamlessly connects vector search with your PostgreSQL database for efficient RAG operations. Full <strong>LangChain</strong> compatibility for advanced workflows.</p>
                     <div class="ai-tech-tags">
                         <span class="tech-tag">Custom Store</span>
-                        <span class="tech-tag">LangChain Integration</span>
+                        <span class="tech-tag highlight-tag">LangChain</span>
+                        <span class="tech-tag highlight-tag">pgvector</span>
                         <span class="tech-tag">Supabase</span>
                     </div>
                 </div>
@@ -350,7 +356,7 @@
                 <div class="arch-arrow">↓</div>
                 <div class="arch-layer">
                     <h4>AI & ML Layer</h4>
-                    <p>OpenAI GPT-5 Nano + LangChain (RAG) + LangGraph (multi-step reasoning). Automatic embedding generation with text-embedding-3-small. Vector similarity search for semantic queries.</p>
+                    <p><strong>OpenAI API</strong> (GPT-5 Nano) + <strong>LangChain</strong> (RAG orchestration) + <strong>LangGraph</strong> (multi-step reasoning). <strong>pgvector</strong> for 1536-dimensional embeddings with HNSW indexing. Automatic embedding generation via <strong>OpenAI API</strong> (text-embedding-3-small). Vector similarity search for semantic queries.</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Construction Project Manager</title>
+    <meta name="description" content="Interactive demo showcasing AI-powered project management features with RAG, LangChain, and pgvector.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .demo-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .demo-hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+        }
+
+        .demo-section {
+            padding: 4rem 0;
+            background: var(--bg-secondary);
+        }
+
+        .demo-section:nth-child(even) {
+            background: var(--bg-primary);
+        }
+
+        .demo-step {
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .demo-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            line-height: 3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .step-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gif-container {
+            background: var(--bg-primary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border);
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            display: block;
+        }
+
+        .tech-highlight {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0 0.25rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--primary-hover);
+        }
+
+        .demo-nav {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .demo-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .demo-nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .demo-nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .demo-nav-links a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="demo-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                <span>Project Manager</span>
+            </div>
+            <div class="demo-nav-links">
+                <a href="index.html">← Back to Home</a>
+                <a href="https://github.com/zeinalasali/project-manager-showcase" target="_blank" class="btn-outline">View Repo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Hero -->
+    <section class="demo-hero">
+        <div class="container">
+            <h1>See It In Action</h1>
+            <p>Watch how AI-powered project management works with RAG, LangChain, and pgvector</p>
+        </div>
+    </section>
+
+    <!-- Step 1: Login & Authentication -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-step">
+                <div class="step-number">1</div>
+                <h2 class="step-title">Secure Authentication</h2>
+                <p class="step-description">
+                    Sign in with Supabase Auth. Role-based access control ensures admins and users see only their organization's data.
+                </p>
+                <div class="gif-container">
+                    <img src="gifs/01-login.gif" alt="Login and Authentication" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 2: Sign Up -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-step">
+                <div class="step-number">2</div>
+                <h2 class="step-title">User Onboarding</h2>
+                <p class="step-description">
+                    Secure signup flow using invitation keys. Supabase Edge Functions handle profile creation, organization membership, and role assignment atomically.
+                </p>
+                <div class="gif-container">
+                    <img src="gifs/02-signup.gif" alt="User Signup" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 3: Project Management -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-step">
+                <div class="step-number">3</div>
+                <h2 class="step-title">Project & Item Management</h2>
+                <p class="step-description">
+                    Create and manage construction projects with detailed items. Track status, budget vs actual revenue, and monitor progress. <strong>Behind the scenes:</strong> When you create a project item, <span class="tech-highlight">OpenAI API</span> automatically generates a 1536-dimensional embedding via text-embedding-3-small, and <span class="tech-highlight">pgvector</span> stores it in PostgreSQL for instant semantic search. <span class="tech-highlight">LangChain</span> orchestrates this entire pipeline.
+                </p>
+                <div class="gif-container">
+                    <img src="gifs/03-create-project.gif" alt="Project Management" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 4: Profitability Analysis -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-step">
+                <div class="step-number">4</div>
+                <h2 class="step-title">Profitability Analysis</h2>
+                <p class="step-description">
+                    Real-time profitability tracking comparing actual revenue to total costs. Visual profit/loss indicators at both project and item levels. Budget vs actual comparisons with percentage calculations.
+                </p>
+                <div class="gif-container">
+                    <img src="gifs/04-item-profitability.gif" alt="Profitability Analysis" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 5: Cost Tracking -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-step">
+                <div class="step-number">5</div>
+                <h2 class="step-title">Cost Entry & Tracking</h2>
+                <p class="step-description">
+                    Track all project costs including materials, labor, equipment, and subcontractors. Automatic labor cost calculation based on hourly rates. Real-time cost aggregation and filtering.
+                </p>
+                <div class="gif-container">
+                    <img src="gifs/05-cost-entries.gif" alt="Cost Tracking" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 6: AI Copilot with RAG -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-step">
+                <div class="step-number">6</div>
+                <h2 class="step-title">AI Copilot with RAG (LangChain + pgvector)</h2>
+                <p class="step-description">
+                    Ask natural language questions about your projects. Here's how it works: <br><br>
+                    <strong>1. Query Processing:</strong> Your question is sent to <span class="tech-highlight">OpenAI API</span> to generate a query embedding (text-embedding-3-small).<br>
+                    <strong>2. Vector Search:</strong> <span class="tech-highlight">pgvector</span> performs cosine similarity search using HNSW indexing to find the 5 most relevant project items from your database.<br>
+                    <strong>3. Context Retrieval:</strong> <span class="tech-highlight">LangChain</span> retrieves full details for the matched items and builds a rich context.<br>
+                    <strong>4. Response Generation:</strong> <span class="tech-highlight">LangChain</span> orchestrates the RAG pipeline, sending context + query to <span class="tech-highlight">OpenAI GPT-5 Nano API</span> for intelligent response generation.<br><br>
+                    All powered by <span class="tech-highlight">LangChain</span> for orchestration, <span class="tech-highlight">pgvector</span> for semantic search, and <span class="tech-highlight">OpenAI API</span> for embeddings and chat.
+                </p>
+                <div class="gif-container">
+                    <img src="gifs/06-copilot.gif" alt="AI Copilot with RAG" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Explore the Code?</h2>
+            <p>Check out the full implementation with LangChain, pgvector, and OpenAI API integration.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/zeinalasali/project-manager-showcase" target="_blank" class="btn-primary">View Repository</a>
+                <a href="index.html" class="btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Construction Project Manager. Built with OpenAI API, LangChain, and pgvector.</p>
+            <div class="footer-links">
+                <a href="https://github.com/zeinalasali/project-manager-showcase" target="_blank">GitHub</a>
+                <a href="index.html">Home</a>
+                <a href="demo.html">Demo</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
