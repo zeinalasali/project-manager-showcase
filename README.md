@@ -1,5 +1,7 @@
 # Construction Project Manager - AI-Powered Cost Tracking System
 
+**Source code can be provided upon request**
+
 A full-stack construction project management application with an intelligent AI copilot powered by **Retrieval Augmented Generation (RAG)**, **LangChain**, **pgvector**, and **OpenAI GPT-5 Nano API**. This system streamlines project tracking, cost management, and profitability analysis with semantic search capabilities and intelligent automation.
 
 ## 🎯 Problem Statement
@@ -343,4 +345,3 @@ The showcase includes:
 
 ---
 
-**Source code can be provided upon request**
